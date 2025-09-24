@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+nav {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(52, 73, 94, 0.95);
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    transform: translateY(-2px);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.profile-image {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 8px solid #3498db;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+.intro {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stat-item {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+}
+
+.gallery-row {
+    margin: 2rem 0;
+    overflow: hidden;
+}
+
+.gallery-row::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.gallery-image {
+    width: 50%;
+    padding: 1rem;
+    float: left;
+}
+
+.gallery-text {
+    width: 50%;
+    padding: 2rem;
+    float: right;
+}
+
+.gallery-row:nth-child(even) .gallery-image {
+    float: right;
+}
+
+.gallery-row:nth-child(even) .gallery-text {
+    float: left;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.skills-section {
+    margin-bottom: 4rem;
+}
+
+.skills-section h2 {
+    color: #2c3e50;
+    border-bottom: 4px solid #3498db;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.skills-grid {
+    margin: 2rem -1rem;
+}
+
+.skill-item {
+    float: left;
+    width: calc(33.333% - 2rem);
+    margin: 1rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+}
+
+.skills-grid::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.contact-form {
+    width: 70%;
+    float: right;
+    padding: 2rem;
+}
+
+.contact-info {
+    width: 30%;
+    float: left;
+    padding: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+.hobby-item {
+    float: left;
+    width: calc(50% - 2rem);
+    margin: 1rem;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.hobby-grid::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+footer {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    clear: both;
+}
