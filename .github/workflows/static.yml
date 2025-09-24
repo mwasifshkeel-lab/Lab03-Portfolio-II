@@ -1,0 +1,33 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger the action when changes are pushed to the 'main' branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2  # Checkout the code from the repository
+
+      - name: Set up Node.js (optional, if you have any build tools like Jekyll, npm, etc.)
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Build the site (optional, only if you need to build your site)
+        run: |
+          # Add your build steps here if you're using something like Jekyll or npm
+          # For example, if using npm, you might run npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # The branch to deploy the site to (usually 'gh-pages')
+          folder: .  # The folder to deploy (if deploying from the root of the repository, use '.')
+
+      - name: Commit changes to gh-pages branch
+        run: git commit -m "Deploy site to GitHub Pages" --amend --no-edit
